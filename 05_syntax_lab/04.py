@@ -1,8 +1,18 @@
+from random import randint
+from array import array
+
 """
-Write a program that reads lines from the user
-until an empty line is inserted.
-After the user typed in an empty line,
-print all previously inserted lines in reverse
-order (from last to first)
+Recive lines until getting empty one and printing them beckword
 """
 
+lines = []
+line = raw_input()
+lines.insert(0, line)
+
+while line != '': 
+        line = raw_input()
+        lines.insert(0, line)
+        
+
+for l in lines:
+        print  l
