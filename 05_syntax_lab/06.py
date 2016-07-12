@@ -1,9 +1,24 @@
+from random import randint
+from array import array
+
 """
-Write a program that randomizes 2 numbers
-and calculates their least common multiplier,
-that is the smallest number that is divisable
-by both.
-For example if the numbers were 4 and 6,
-program should print 12
+The small number dividing two numbers
 """
 
+i=1
+num1 = randint(1,10)
+num2 = randint(1,10)  
+print "The numbers are :{},{}".format(num1 ,num2)
+
+while True: 
+
+    if num1>num2: 
+        if (num1*i)%num2 == 0:
+            finalNum = (num1*i)
+            break
+    else:
+        if (num2*i)%num1 ==0 :
+            finalNum = (num2*i)
+            break
+    i+=1   
+print "The small number is: " , finalNum 
